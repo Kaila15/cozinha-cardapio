@@ -1,82 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema</title>
+  <link rel="stylesheet" href="sistema.css">
+
+
 </head>
 
-
 <body>
-    <header>
-        <h1>sistema cozinha </h1>
-        <button>sair</button>
-    </header>
-    <main>
-        <h2>lista de cardapio</h2>
-        <table>
-            <tr>
-                <th>turno</th>
-                <th>data</th>
-                <th>refeicao</th>
-            </tr>
-            <tr>
-                <td>manha</td>
-                <td>22/09/25</td>
-                <td>almoco</td>
-            </tr>
-            <tr>
-                <td>tarde</td>
-                <td>22/09/25</td>
-                <td>almoco</td>
-            </tr>
-            <tr>
-                <td>noite</td>
-                <td>22/09/25</td>
-                <td>janta</td>
-            </tr>
-            <tr>
-                <td>integral</td>
-                <td>22/09/25</td>
-                <td>lanche</td>
-            </tr>
-        </table><br><br>
-        <h2>fale conosco</h2>
-        <label for="option">escolha o assunto:</label>
+  <header>
+    <h1>Sistema Cozinha</h1>
+    <div>
+      <button id="cadastrar">Sair</button>
+    </div>
+  </header>
 
 
-        <select name="assunto" id="assunto">
-            <option value="reclamacoes">reclamacoes</option>
-            <option value="solucoes">solucoes</option>
-            <option value="sugentoes">sugentoes</option>
-        </select><br><br>
-        <input type="text" name="escreva aqui" placeholder="escreva aqui"><br>
-        <button>enviar</button>
+  <main>
+
+
+    <div>
+      <section>
+        <h2>Lista de Cardapio</h2>
+        <table style="width:100%">
+          <tr>
+            <th>Turno</th>
+            <th>Data</th>
+            <th>Refeição</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+          </tr>
+          <tr>
+            <td>Manhã</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Tarde</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Noite</td>
+            <td>22/09/2025</td>
+            <td>Janta</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Integral</td>
+            <td>22/09/2025</td>
+            <td>Lanche</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+        </table>
+
+      </section>
+
+      <section class="fale">
+        <h2>FALE CONOSCO</h2>
+        <div class="fale-conosco">
+          <div>
+            <select name="turnos" id="turnos">
+              <option value="" selected disabled>Escolha o assunto</option>
+              <option value="elogio">Elogio</option>
+              <option value="opiniao">Opinião</option>
+              <option value="critica">Crítica</option>
+              <option value="sugestao">Sugestão</option>
+            </select><br>
+
+            <textarea name="" id=""></textarea><br>
+          </div>
+
+          <button id="enviar">Enviar</button>
+        </div>
+
+
+      </section>
+    </div>
+    <aside>
+
+      <h2>CADASTRAR REFEIÇÕES</h2>
+      <h3>Cadastrar Prato</h3>
+      <form>
+
+
+        <fieldset>
+          <legend>Data</legend>
+          <input type="date" id="date" name="data" class="ocultar"><br>
+          <br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Turno</legend>
+          <select name="turnos" id="turnos">
+            <option value="" selected disabled class="ocultar">Turno</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="integral">Integral</option>
+          </select><br>
+        </fieldset>
+
+        <h5>REFEIÇÃO</h5>
+
+        <fieldset>
+          <legend>Titulo</legend>
+          <input type="text" id="refeição" name="refeição" class="ocultar"><br>
+          <br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Itens</legend>
+        
+          <textarea  id="refeição" name="itens" placeholder="Itens" class="ocultar"></textarea>
+          <br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Bebida</legend>
+          <input type="bebida" id="bebida" name="bebida" placeholder="Bebida" class="ocultar"><br>
+          <br>
+        </fieldset>
+        <fieldset class="button-inserir">
+          <legend>Inserir img</legend>
+          <button id="inserir">Inserir img</button>
+          <br>
+        </fieldset>
+        <button id="cadastrar">Cadastrar</button>
+
+
+      </form>
+    </aside>
+
+  </main>
 
 
 
+  <footer>
+    <p>Desenvolvido por: Kaila</p>
 
-        <h2>cadastrar prato</h2>
-        <input type="number" name="data" placeholder="data"><br>
-        <input type="text" name="turno" placeholder="turno"><br>
-
-
-        <h2>refeicao</h2>
-        <input type="text" name="titulo" placeholder="titulo"><br>
-        <input type="text" name="itens" placeholder="itens"><br>
-        <input type="text" name="bebida" placeholder="bebida"><br>
-
-
-        <button>inserir img</button><br><br>
-        <button>cadastrar</button>
-
-
-    </main>
+  </footer>
 </body>
 
-
 </html>
-

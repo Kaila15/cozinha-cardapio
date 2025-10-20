@@ -6,28 +6,184 @@
 
 
 
-table,
-th,
-td {
-    border: 1px solid rgb(0, 0, 0);
-    border-style: inset;
-}
+
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: "inter", sans-serif;
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+fieldset {
+    height: 66px;
+    width: 422px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+legend {
+    font-size: 24px;
+    font-family: 'inter';
+}
+
+input {
+    height: 33px;
+    width: 422px;
+    border: 0px;
+    font-size: 24px;
+    outline: 0;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 40px;
+    margin-top: 25px;
+    border: 1px solid black;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "inter", sans-serif;
+}
+
+h1 {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    color: blue;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+h2 {
+    color: #2E13C8;
+}
+
+h3 {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(0, 0, 0, 0.51);
+}
+
+div A {
+    font-weight: 600;
+    color: #2E13C8;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.desativado {
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: 500;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+}
+
+figure {
+    display: flex;
+    justify-content: space-between;
+    width: 422px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+body h2 {
+    color: #2B5ECC font-weight 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.ativado {
+    color: #2E13C8;
+    font-weight: 600;
+    font-style: Bold;
+    font-size: 19px;
+    line-height: 100%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
 
 @media(max-width:768px) {
-    body {
-        background-color: #2E13C8;
-        font-family: "inter", sans-serif;
 
+    body,
+    main,
+    header,
+    footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    fieldset,
+    input,
+    figure,
+    button {
+        width: 40vh;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h3 {
+        color: #303AFF;
+        font-size: 36px;
+        font-family: "inter";
+        width: 390px;
+        height: 69px;
+        background: #448AFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-/*alt 76
-#2B5ECC
-#2B5ECCAB
-*/
