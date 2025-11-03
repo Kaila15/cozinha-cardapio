@@ -161,3 +161,14 @@ export async function excluirCardapio(id) {
         alert("Ocorreu um erro ao excluir cardápio");
     }
 }
+
+export async function buscarCardapio(id) {
+    try {
+         const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+    } catch (error) {
+        console.error("Erro ao buscar cardápio", error);
+        alert("Ocorreu um erro ao buscar cardápio");
+    }
+}
