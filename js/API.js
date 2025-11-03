@@ -78,3 +78,86 @@ async function recuperarSenha(email) {
         return { sucesso: false, mensagem: "Erro de conexão API" };
     }
 }
+
+export async function listarCardapio() {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao listar cardápio", error);
+        alert("Ocorreu um erro ao carregar cardápio");
+    }
+}
+
+export async function loginCozinheira(email, senha) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao fazer login", error);
+        alert("Ocorreu um erro ao fazer login");
+    }
+}
+
+export async function cadastrarCozinheira(cardapio) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao cadastrar", error);
+        alert("Ocorreu um erro ao cadastrar");
+    }
+}
+
+export async function recuperarSenha(email) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao recuperar senha", error);
+        alert("Ocorreu um erro ao recuperar senha");
+    }
+}
+
+export async function alterarCardapio(id) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao alterar cardápio", error);
+        alert("Ocorreu um erro ao alterar cardápio");
+    }
+}
+
+export async function cadastrarCardapio(cardapio) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+
+    } catch (error) {
+        console.error("Erro ao cadastrar cardápio", error);
+        alert("Ocorreu um erro ao cadastrar cardápio");
+    }
+}
+
+export async function excluirCardapio(id) {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapio = await res.json();
+        return cardapios;
+    } catch (error) {
+        console.error("Erro ao excluir cardápio", error);
+        alert("Ocorreu um erro ao excluir cardápio");
+    }
+}
